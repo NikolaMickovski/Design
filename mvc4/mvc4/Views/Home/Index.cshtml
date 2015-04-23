@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Home/Layout.cshtml";
+}
+@model IEnumerable<mvc4.Models.BikeModel>
+
+
+    @section Header{
+        <div style="font-size: larger;">МОЈ ТОЧАК</div>
+    }
+    @section Menu{
+        <div>дома | профил | контакт</div>
+    }
+@section Content{
+    <div>
+        Добредојдовте на страницата МојТочак!
+    </div>
+    @ViewBag.SomeProperty
+    @foreach (var bike in Model)
+    {
+        <div>
+            Точак:<br />
+            <p>@bike.Ime</p>
+            <p>@bike.Model</p>
+        </div>
+    }
+    }
+    @section Footer{
+        &reg;сите права се задржани
+    }
